@@ -12,10 +12,6 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 def calcRotationAccuracy(data):
-    """
-    Berechnet die Rotations-Accuracy als euklidische Distanz zwischen
-    current-rotation und original-rotation.
-    """
     try:
         dx = data["current-rotation-x"] - data["original-rotation-x"]
         dy = data["current-rotation-y"] - data["original-rotation-y"]
